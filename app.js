@@ -16,13 +16,14 @@ function loadBooks(event) {
             // artist.forEach((artista) => {
                 //  console.log(book.img)
                 artistPage.innerHTML += `<div class="-fluid">
-                <a href="album.html"
-                  ><img class="" src="${artist.picture}" alt="..." width="300" height="400" />
-                </a>
-                <div class="albumText">
-                  <p><b> Name:${artist.name}</p>
-                  <p>id:${artist.id}</p>
-                </div>
+                <div class="card" style="width: 18rem;">
+  <img src="${artist.picture}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${artist.name}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
               </div>`;
             // });
 
