@@ -23,7 +23,10 @@
     <title>Artist</title>
   </head>
   <body id="sidemenu" class="artist-page">
-    <main>
+    <button onclick="loadBooks()">click</button>
+    
+    <main id="artist1">
+      
       <nav class="side">
         <div class="d-flex pr-2" style="justify-content: center">
           <a href="homePage.html">
@@ -321,9 +324,9 @@
             </div>
           </div>
         </div>
-        <div class="container mt-5">
+        <div  class="container mt-5">
           <h4 class="albums font-weight-bold">Albums</h4>
-          <div class="row">
+          <div id="albumCont" class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3">
               <a href="album.html"
                 ><img class="album" src="assets/albumCover7.jpg" alt="..." />
@@ -668,5 +671,6 @@
         .getElementById("close-button")
         .addEventListener("click", openMenu);
     </script>
+    <script src="/app.js"></script>
   </body>
 </html>
