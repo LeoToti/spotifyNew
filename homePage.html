@@ -18,6 +18,7 @@
     <title>side menu</title>
   </head>
   <body id="sidemenu">
+    <script src="/app.js"></script>
     <main id="homePage">
       <nav class="side">
         <div class="d-flex pr-2" style="justify-content: center">
@@ -421,8 +422,8 @@
                 alt="album"
                 style="width: 100%"
               />
-              <a
-                href="./artistPlusSidebar.html"
+              <a onclick="loadBooks()"
+                href=""
                 style="
                   display: flex;
                   text-decoration: none;
@@ -434,6 +435,7 @@
                 "
                 >Shahram</a
               >
+              <button onclick="loadBooks(event)" href="">queen</button>
             </div>
             <div
               class="single-album col-12 col-sm-4 col-lg-2 py-2 py-md-1 px-1 d-flex"
