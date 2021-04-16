@@ -113,8 +113,14 @@ function loadMetallica(event) {
             console.error(err);
         });
 }
+// loadPinkFloyd("pink-floyd");
+// loadPinkFloyd("metallica");
+// loadPinkFloyd("pink-floyd");
+// loadPinkFloyd("pink-floyd");
+// loadPinkFloyd("pink-floyd");
 
 function loadPinkFloyd(event) {
+    // let txt = click.event.currentTarget.text
     // let newDiv = event.target.value
     // console.log(newDiv)
     // let valor = newDiv.value
