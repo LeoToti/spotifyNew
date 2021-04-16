@@ -5,7 +5,7 @@ function loadBooks(event) {
     console.log(newDiv)
     let valor = newDiv.value
     console.log(newDiv)
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${newDiv}`)
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/queen`)
         .then((response) => response.json())
         .then((artist) => {
             BookCatalogue = artist;
