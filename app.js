@@ -1,10 +1,10 @@
 let BookCatalogue = [];
 
 function loadBooks(event) {
-    let newDiv = event.target.value
-    console.log(newDiv)
-    let valor = newDiv.value
-    console.log(newDiv)
+    // let newDiv = event.target.value
+    // console.log(newDiv)
+    // let valor = newDiv.value
+    // console.log(newDiv)
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/queen`)
         .then((response) => response.json())
         .then((artist) => {
@@ -15,13 +15,13 @@ function loadBooks(event) {
             artistPage.innerHTML = ""
             // artist.forEach((artista) => {
                 //  console.log(book.img)
-                artistPage.innerHTML += `<div class="-fluid">
+                artistPage.innerHTML += `<div class="-fluid" style="background-size:100vh">
                 <div class="card" style="width: 18rem;">
   <img src="${artist.picture}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${artist.name}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title" style="color:black">Name: ${artist.name}</h5>
+    <p class="card-text" style="color:black">id: ${artist.id}</p>
+
   </div>
 </div>
               </div>`;
