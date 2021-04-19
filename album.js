@@ -1,32 +1,19 @@
 window.onload = function(){
-	albumDetails('75621062');
+	const param = new URLSearchParams(window.location.search)
+	const id = param.get('id')
+	albumDetails(id);
 }
 
-//window.addEventListener('DOMContentLoaded', function(){
-//	albumDetails('75621062');
-//})
 
 
-//	const combinedFunc = function(){
-//	//window.location.href = 'album.html';
-//	//lbumDetails('75621062');
-	
-//}
-
-
-//combinedFunc();
 let albums = [];
-
-//const getFetch = function(){
-	
-
-//		console.log(album.tracks.data);
 
 		const albumDetails = function(id){
 
 		fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
 		.then(res => res.json())
 		.then(album =>{
+			console.log();
 		const music = document.getElementById('daynamic');
 		music.innerHTML=
 			`<div class="col-12 col-lg-3 offset-lg-1 py-5">
@@ -82,7 +69,7 @@ let albums = [];
 	                    ></a
 	                  >
 	                </div>
-	                <div class="col-2 text-white-50">1:13</div>
+	                <div class="col-2 text-white-50">${Math.floor(element.duration/60)}: ${element.duration % 60}</div>
 	              </div>
 				  `;
 });
@@ -90,21 +77,3 @@ let albums = [];
 	
 })
 }
-
-
-
-
-
-
-
-
-
-
-//const alb = document.querySelectorAll('#pageContent > div.albums.mt-5 > div > div')
-//for(let i =0; i < alb.length; i++){
-//alb[i].innerHTML = `
-//<divclass="single-album col-12 col-sm-4 col-lg-2 py-2 py-md-1 px-1 d-flex"
-//    style="justify-content: center; flex-direction: column">
-//              <img
-
-//}
